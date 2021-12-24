@@ -40,7 +40,7 @@ const Sidebar = () => {
                      <nav className="iq-sidebar-menu">
                         <Accordion as="ul" id="iq-sidebar-toggle" className="iq-menu">
                            <li className={`${location.pathname === '/' ? 'active' : ''} `}>
-                              <Link href="/" ><a><i class="las la-home"></i><span>Dashboard</span></a></Link>
+                              <Link href="/" ><a><i className="las la-home"></i><span>Dashboard</span></a></Link>
                            </li>
                            <Accordion.Item as="li" className={`${location.pathname === '/dashboards/profiles/profile1' || location.pathname === '/dashboards/profiles/profile2' || location.pathname === '/dashboards/profiles/profile3' ?  'active' : ''}`} eventKey="sidebar-profiles"  >
                               <CustomToggle eventKey="sidebar-profiles" onClick={(activeKey) => setActiveMenu(activeKey)}>
@@ -68,13 +68,13 @@ const Sidebar = () => {
                               </Accordion.Collapse>
                            </Accordion.Item>
                            <li className={`${location.pathname === '/balance' ? 'active' : ''} `}>
-                              <Link href="/balance" ><a><i class="las la-wallet"></i><span>Balance</span></a></Link>
+                              <Link href="/balance" ><a><i className="las la-wallet"></i><span>Balance</span></a></Link>
                            </li>
                            <li className={`${location.pathname === '/balance' ? 'active' : ''} `}>
-                              <Link href="/goal" ><a><i class="las la-radiation"></i><span>Goal</span></a></Link>
+                              <Link href="/goal" ><a><i className="las la-radiation"></i><span>Goal</span></a></Link>
                            </li>
                            <li className={`${location.pathname === '/balance' ? 'active' : ''} `}>
-                              <Link href="/account-setting" ><a><i class="las la-user"></i><span>Account Setting</span></a></Link>
+                              <Link href="/account-setting" ><a><i className="las la-user"></i><span>Account Setting</span></a></Link>
                            </li>
                         </Accordion>
                         
