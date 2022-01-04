@@ -13,11 +13,13 @@ function CustomToggle({ children, eventKey, onClick }) {
 
    const isCurrentEventKey = activeEventKey === eventKey;
  
+   
+   
    return (
-     <Link href="#" aria-expanded={isCurrentEventKey ? 'true' : 'false'} className="nav-link" role="button" onClick={(e) => {
+     <Link href="#profiles" onClick={(e) => {
        decoratedOnClick(isCurrentEventKey)
      }}>
-        <a>
+        <a  aria-expanded={isCurrentEventKey ? 'true' : 'false'} className="nav-link" role="button" >
          {children}
         </a>
       
@@ -41,6 +43,9 @@ const Sidebar = () => {
                         <Accordion as="ul" id="iq-sidebar-toggle" className="iq-menu">
                            <li className={`${location.pathname === '/' ? 'active' : ''} `}>
                               <Link href="/" ><a><i className="las la-home"></i><span>Dashboard</span></a></Link>
+                           </li>
+                           <li className={`${location.pathname === '/my-page' ? 'active' : ''} `}>
+                              <Link href="/my-page" ><a><i className="las la-globe"></i><span>My Page</span></a></Link>
                            </li>
                            <Accordion.Item as="li" className={`${location.pathname === '/dashboards/profiles/profile1' || location.pathname === '/dashboards/profiles/profile2' || location.pathname === '/dashboards/profiles/profile3' ?  'active' : ''}`} eventKey="sidebar-profiles"  >
                               <CustomToggle eventKey="sidebar-profiles" onClick={(activeKey) => setActiveMenu(activeKey)}>

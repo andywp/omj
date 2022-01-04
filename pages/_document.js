@@ -20,6 +20,8 @@ class MyDocument extends Document {
             <link rel="stylesheet" href="/assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css"></link>
             <script src="/assets/js/libs.min.js"></script>
             <script src="/assets/js/app.js"></script>
+            <script src="/assets/js/lottie.js"></script>
+            
         </Head>
         <body className="dark-mode dark" >
           <Main />
